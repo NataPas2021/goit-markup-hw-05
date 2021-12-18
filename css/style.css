@@ -266,6 +266,9 @@ img {
   background: rgba(0, 0, 0, 0.2);
   left: 0px;
   top: 0px;
+  opacity: 1;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -276,6 +279,7 @@ img {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale (1.1);
+  opacity: 0,5;
 }
 
 .modal {
@@ -286,14 +290,16 @@ img {
   width: 528px;
   height: 581px;
   
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-function);
-  
   background-color: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+
+  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
 }
+
 
 .button-close {
   position: absolute;
@@ -309,8 +315,16 @@ img {
   border-radius: 50%;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transform: scale(1);
+  
+  transition: transform 250ms var(--timing-function);
 }
 
+.button-close:hover,
+.button-close:focus {
+  transform: scale(1.1);
+}
 
 
 .icon-close-button {
@@ -826,8 +840,6 @@ img {
 }
 
 .card-content {
-  position: absolute; 
-  width: 100%;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
