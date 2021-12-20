@@ -86,13 +86,6 @@ img {
   margin-right: auto;
 }
 
-.link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-}
 
 
 /*--------------Header nav + contacts--------------*/
@@ -113,6 +106,14 @@ img {
 
   font-family: inherit;
   text-decoration: none;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
 
   transition: color 250ms var(--timing-function);
 }
@@ -122,6 +123,7 @@ img {
 .site-nav .link:active {
   color: var(--accent-color);
 }
+
 
 .item {
   position: relative;
@@ -148,19 +150,12 @@ img {
   bottom: -33px;
   
   background-repeat: no-repeat;
-  background-image: url(../images/linehover.svg);
-  background-size: contain;
+  background-color: var(--accent-color);
   border-radius: 2px; 
 
   transition: background-color 250ms var(--timing-function);
 }
 
-/*.link.active:active::after,
-.link.active:hover::after,
-.link.active:focus::after {
-  background-color: var(--accent-color);
-
-}*/
 
 .contact-info {
   margin-left: auto;
